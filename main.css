@@ -85,7 +85,7 @@ p {
 .background_image {
     background-color: #ff745760;
     background-blend-mode: soft-light;
-    background-image: url('daniel_jumping.jpeg');
+    background-image: url('assets/daniel_jumping.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
