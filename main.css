@@ -89,7 +89,7 @@ p {
 .background_image {
     background-color: #ff745760;
     background-blend-mode: soft-light;
-    background-image: url('https://www.danielmiyar.es/assets/daniel_jumping.jpeg');
+    background-image: url('/assets/daniel_jumping.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -157,7 +157,7 @@ p {
     flex-direction: column; 
     align-content: center; 
     justify-content: center;
-    background-image: url('https://www.danielmiyar.es/assets/latered.png');
+    background-image: url('/assets/latered.png');
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
