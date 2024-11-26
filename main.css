@@ -1,12 +1,12 @@
 :root {
-    --accent_color: #195CC8;
-    --accent_color_2: #E94F37;
+    --accent_color: #FFE0DA;
+    --accent_color_2: #202030;
     --accent_color_3: #26A671;
     --white: #FAFAFA;
     --black: #141414;
     --header_font: "Abril Fatface",serif;
     --body_font: "Hind Madurai",sans-serif;
-    --banner_font: "VT323",monospace
+    --banner_font: "VT323",monospace;
 }
 
 section{
@@ -68,6 +68,10 @@ p {
     justify-content: flex-end;
 }
 
+.navbar-brand:hover {
+    color:aliceblue;
+}
+
 .menu-buttons, .menu-buttons:visited {
     font-family: var(--header_font);
     display: inline-block;
@@ -85,7 +89,7 @@ p {
 .background_image {
     background-color: #ff745760;
     background-blend-mode: soft-light;
-    background-image: url('assets/daniel_jumping.jpeg');
+    background-image: url('https://www.danielmiyar.es/assets/daniel_jumping.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -96,6 +100,13 @@ p {
     justify-content: space-between;
 }
 
+
+.fromBottom {
+    animation: 1.5s ease-out 1.2s 1 slideInBottom;
+    animation-delay: 0s;
+}
+
+
 .content {
     background-color: aliceblue;
     border: solid;
@@ -103,6 +114,14 @@ p {
     border-color: #202030;
     vertical-align: middle;
     padding: 20px;
+    min-width: 325px;
+    max-width: 50%; 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    animation: 1.5s ease-out 1.2s 1 slideInLeft;
+    animation-delay: 0s;
 }
 .logoandtext {
     display: flex; 
@@ -126,6 +145,7 @@ p {
     color: white;
     font-family: var(--banner_font);
     font-size: 28px;
+    text-align: center;
     
 }
 
@@ -137,14 +157,14 @@ p {
     flex-direction: column; 
     align-content: center; 
     justify-content: center;
-    background-image: url('latered.png');
+    background-image: url('https://www.danielmiyar.es/assets/latered.png');
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
 
 }
 
-.logoandtext:hover {
+.bannerHover:hover {
     cursor: help;
 }
 
@@ -173,32 +193,48 @@ p {
 
 .button.secondary {
     font-family: var(--header_font);
-    border: var(--accent_color) 2px solid;
+    border: var(--accent_color_2) 2px solid;
     background-color: transparent;
-    color: var(--accent_color);
+    color: var(--accent_color_2);
     padding: 10px 18px;
     border-radius: 80px;
     text-decoration: none;
 }
 
+.button.secondary:hover{
+    background-color: var(--accent_color_2);
+    color: var(--accent_color);
+    transition: ease-in-out .5s ;
+}
 .button.navbutton {
     font-family: var(--header_font);
-    padding: 4px 18px;
+    padding: 8px 18px;
     border: #FFE0DA 2px solid;
     background-color: transparent;
     color: #FFE0DA;
-    max-width: 125px;
+    max-width: 150px;
     justify-content: center;
     border-radius: 80px;
     text-decoration: none;
+    text-align: center;
+    align-content: center;
+}
 
+.navbartoggler {
+    
+    
+}
+
+.button.navbutton:hover {
+    border: aliceblue 2px solid;
+    color: aliceblue;
 }
 
 .button.inline {
     font-family: var(--header_font);
-    border: var(--accent_color) 2px solid;
+    border: var(--accent_color_2) 2px solid;
     background-color: transparent;
-    color: var(--accent_color);
+    color: var(--accent_color_2);
     padding: 2px 2px;
     border-radius: 80px;
 }
@@ -208,10 +244,24 @@ p {
     color: #FFE0DA;
 }
 
+.nav-item {
+    display: flex;
+}
+
+.nav-link {
+    color: var(--accent_color);
+}
+
+.nav-link:hover {
+    color: aliceblue;
+    
+}
+
 ul {
     display: flex;
     justify-content: flex-end;
-    width: 150px;
+    width: 100%;
+    gap: 48px;
     list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -302,4 +352,26 @@ ul {
     100% {
         transform: translate(0,-82%)
     }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0%;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    opacity: 0%;      
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
 }
